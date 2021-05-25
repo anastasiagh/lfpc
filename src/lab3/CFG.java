@@ -86,18 +86,18 @@ public class CFG {
             for (String s: line){
                 for (char c: s.toCharArray()){
                     if (c == '0') {
-                        this.contains_epsilon = true; // grammar contains epsilon rules
+                        this.contains_epsilon = true;
                     }
                     else if (String.valueOf(c).toUpperCase().equals(String.valueOf(c))){
                         String t = new String(String.valueOf(c));
                         if (!this.non_terminals.contains(t)) {
-                            this.non_terminals.add(t); // if letter is big add it to non_terminals list
+                            this.non_terminals.add(t);
                         }
                     }
                     else{
                         String t = new String(String.valueOf(c));
                         if (!this.terminals.contains(t)) {
-                            this.terminals.add(String.valueOf(c)); // else add it to terminals list
+                            this.terminals.add(String.valueOf(c));
                         }
                     }
                 }
